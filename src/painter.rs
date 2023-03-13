@@ -131,7 +131,7 @@ fn font_to_image(font: &egui::FontImage, ctx: &mut ggez::Context) -> graphics::I
 
 	let mut pixels: Vec<u8> = Vec::with_capacity(font.pixels.len() * 4);
 
-	let gamma = 1.0;
+	let gamma = 0.2;
 	for pixel in font.srgba_pixels(Some(gamma)) {
 		pixels.extend(pixel.to_array());
 	}
